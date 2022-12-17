@@ -103,7 +103,7 @@ public abstract class AbstractAnnotationBeanPostProcessor  implements Instantiat
      *
      * @since 1.0.11
      */
-    private boolean classValuesAsString;
+    private boolean classValuesAsString = true;
 
     /**
      * whether to turn nested Annotation instances into
@@ -113,7 +113,7 @@ public abstract class AbstractAnnotationBeanPostProcessor  implements Instantiat
      *
      * @since 1.0.11
      */
-    private boolean nestedAnnotationsAsMap;
+    private boolean nestedAnnotationsAsMap = true;
 
     /**
      * whether ignore default value or not
