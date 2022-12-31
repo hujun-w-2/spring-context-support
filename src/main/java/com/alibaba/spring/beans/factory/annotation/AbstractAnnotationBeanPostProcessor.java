@@ -289,7 +289,7 @@ public abstract class AbstractAnnotationBeanPostProcessor  implements Instantiat
         return new AbstractAnnotationBeanPostProcessor.AnnotatedInjectionMetadata(beanClass, fieldElements, methodElements);
     }
 
-    private InjectionMetadata findInjectionMetadata(String beanName, Class<?> clazz, PropertyValues pvs) {
+    protected InjectionMetadata findInjectionMetadata(String beanName, Class<?> clazz, PropertyValues pvs) {
         // Fall back to class name as cache key, for backwards compatibility with custom callers.
         String cacheKey = (StringUtils.hasLength(beanName) ? beanName : clazz.getName());
         // Quick check on the concurrent map first, with minimal locking.
